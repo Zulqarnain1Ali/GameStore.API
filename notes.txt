@@ -1,0 +1,3 @@
+Creating a .net api for a gamestore.
+
+files explaination 
