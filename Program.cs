@@ -1,6 +1,14 @@
+using GameStoreApi.Dtos;
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+List<GameDto> games = [
+    new Gamedto(1, "Game 1", "Action", 59.99m, DateOnly.FromDateTime(DateTime.Now)),
+    new Gamedto(2, "Game 2", "Adventure", 49.99m, DateOnly.FromDateTime(DateTime.Now)),
+    new Gamedto(3, "Game 3", "RPG", 79.99m, DateOnly.FromDateTime(DateTime.Now))
+];
+
+app.MapGet("/games", () => games);
 
 app.Run();
