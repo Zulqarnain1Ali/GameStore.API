@@ -1,3 +1,9 @@
 Creating a .net api for a gamestore.
 
 files explaination 
+
+
+39min - Getting interaction with api without opening browser again and again
+
+42 - create dto file
+
