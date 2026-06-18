@@ -1,11 +1,12 @@
-namespace Gamestore.DTOs;
+namespace GameStore.DTOs;
  
 //  A dto is a a contract between the client and server, since it 
 //  represents the a shared agreement about how data will be send and recieved.
-public record class GameDto(
-    int ID,
-    string Name, 
+
+public record GameDto(
+    int Id,
+    string Name,
     string Genre,
-    Decimal Price,
+    decimal Price,
     DateOnly ReleaseDate
 );
