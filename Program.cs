@@ -4,11 +4,21 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 List<GameDto> games = [
-    new GameDto(1, "Game 1", "Action", 59.99m, DateOnly.FromDateTime(DateTime.Now)),
+    new GameDto(1, "Game 1", "Action", 59.99m, new DateOnly(2022, 01, 01)),
     new GameDto(2, "Game 2", "Adventure", 49.99m, DateOnly.FromDateTime(DateTime.Now)),
     new GameDto(3, "Game 3", "RPG", 79.99m, DateOnly.FromDateTime(DateTime.Now))
 ];
 
+//get /games
 app.MapGet("/games", () => games);
 
+//get /games/1
+app.MapGet("/games/{id}", (int id) => games.Find(game => game.Id == id));
+
+
+//post /games
+app.MapPost("/games", (CreateGameDtos newGame) =>
+{
+    
+});
 app.Run();

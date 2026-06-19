@@ -1,1 +1,4 @@
 Get http://localhost:5021
+
+###
+Get http://localhost:5021/games/1
