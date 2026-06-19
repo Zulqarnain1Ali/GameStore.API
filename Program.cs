@@ -36,4 +36,10 @@ app.MapPost("/games", (CreateGameDtos newGame) =>
     return Results.CreatedAtRoute(GetGameEndpointName, new {id = game.Id}, game);
 });
 
+
+// PUT /games/1
+ 
+
+
+ 
 app.Run();
