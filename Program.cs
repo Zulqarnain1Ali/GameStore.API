@@ -1,4 +1,5 @@
 using GameStore.DTOs;
+using Microsoft.AspNetCore.Authentication.OAuth.Claims;
 
 const string GetGameEndpointName = "GetGame";
 
@@ -54,5 +55,15 @@ app.MapPut("/games/{id}", (int id, UpdateGameDto updatedGame) =>
 
 
 
-app.Run();
 
+
+// DELETE /games/1
+app.MapDelete("/games/{id}", (int id) =>
+{
+    games.RemoveAll(game => game.Id == id);
+
+    return Results.NoContent();
+});
+
+
+app.Run();
