@@ -38,7 +38,7 @@ app.MapPost("/games", (CreateGameDtos newGame) =>
 
 
 // PUT /games/1
- app.MapPut("/game/{id}", (int id, UpdateGameDto updatedGame) =>
+app.MapPut("/games/{id}", (int id, UpdateGameDto updatedGame) =>
  {
      var index = games.FindIndex(game => game.Id == id);
      games[index] = new GameDto(
@@ -55,3 +55,4 @@ app.MapPost("/games", (CreateGameDtos newGame) =>
 
 
 app.Run();
+

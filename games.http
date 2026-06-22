@@ -1,7 +1,7 @@
 Get http://localhost:5021
 
 ###
-Get http://localhost:5021/games/1
+Get http://localhost:5021/games/3
 
 ###
 POST http://localhost:5021/games
@@ -13,3 +13,15 @@ Content-Type: application/json
     "Price": 59.99,
     "ReleaseDate": "2010-02-01"
 }
+
+###
+PUT http://localhost:5021/games/3
+Content-Type: application/json
+
+{
+    "Name": "Street Fighter 2 turbo",
+    "Genre": "Fighting",
+    "Price": 29.99,
+    "ReleaseDate": "1999-07-15"
+}
+
