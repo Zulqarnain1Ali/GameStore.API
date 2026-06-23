@@ -1,5 +1,4 @@
-namespace Gamestore.Models;
-
+namespace GameStore.Models;
 public class Genre
 {
     public int id { get; set; }

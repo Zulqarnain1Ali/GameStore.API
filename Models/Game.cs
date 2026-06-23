@@ -1,7 +1,6 @@
-using Gamestore.Models;
+using GameStore.Models;
 
-namespace GameStore.models;
-
+namespace GameStore.Models;
 public class Game
 {
     public int id { get; set; }
