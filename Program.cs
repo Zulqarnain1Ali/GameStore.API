@@ -1,12 +1,11 @@
 using GameStore.Endpoints;
-using GameStore.DTOs;
-using Microsoft.AspNetCore.Authentication.OAuth.Claims;
 using GameStore.Data;
-using GameStore.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddValidation();
+
+builder.AddGameStoreDb();
 
 var app = builder.Build();
 
