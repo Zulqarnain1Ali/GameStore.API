@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "Name": "Super Mario",
-    "Genre": "Platform",
+    "GenreId": 3,
     "Price": 5.99,
     "ReleaseDate": "2010-02-01"
 }
