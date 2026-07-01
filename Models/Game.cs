@@ -3,7 +3,7 @@ using GameStore.Models;
 namespace GameStore.Models;
 public class Game
 {
-    public int id { get; set; }
+    public int Id { get; set; }
 
     public required string Name { get; set; }
     
@@ -11,7 +11,7 @@ public class Game
 
     public int GenreId {get; set; }
 
-    public decimal Pice {get; set; }
+    public decimal Price {get; set; }
 
     public DateOnly Releasedate {get; set;}
 } 
