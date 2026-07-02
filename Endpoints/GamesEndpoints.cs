@@ -47,7 +47,10 @@ public static class GamesEndpoints
             };
 
             dbcontext.Games.Add(game);
-            dbcontext.SaveChanges();
+            dbcontext.SaveChangesAsync().ContinueWith(task =>
+            {
+                //continue logic
+            });
 
             GameDetailsDto gameDto = new(
                 game.Id,
