@@ -35,7 +35,7 @@ public static class GamesEndpoints
 
 
         //post /games
-        group.MapPost("/", (CreateGameDtos newGame, GameStoreContext dbcontext) =>
+        group.MapPost("/", async (CreateGameDtos newGame, GameStoreContext dbcontext) =>
         {
 
             Game game = new()
@@ -47,10 +47,7 @@ public static class GamesEndpoints
             };
 
             dbcontext.Games.Add(game);
-            dbcontext.SaveChangesAsync().ContinueWith(task =>
-            {
-                //continue logic
-            });
+            await dbcontext.SaveChangesAsync();
 
             GameDetailsDto gameDto = new(
                 game.Id,
